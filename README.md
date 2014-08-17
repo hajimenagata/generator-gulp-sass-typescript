@@ -1,4 +1,4 @@
-# generator-gulp-sass-typescript [![Build Status](https://secure.travis-ci.org/someuser/generator-gulp-sass-typescript.png?branch=master)](https://travis-ci.org/someuser/generator-gulp-sass-typescript)
+# generator-gulp-sass-typescript
 
 > [Yeoman](http://yeoman.io) generator
 
