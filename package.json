@@ -1,14 +1,34 @@
 {
   "name": "generator-gulp-sass-typescript",
-  "version": "0.0.0",
-  "description": "Yeoman generator",
-  "license": "MIT",
+  "version": "0.0.1",
+  "description": "Yeoman generator | liveload, sass and TypeScript",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hajimenagata/generator-gulp-sass-typescript.git"
+  },
+  "homepage": "https://github.com/hajimenagata/generator-gulp-sass-typescript",
+  "bugs": {
+    "url": "https://github.com/hajimenagata/generator-gulp-sass-typescript/issues"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "gulp",
+    "livereload",
+    "sass",
+    "TypeScript",
+    "gulp-plugin"
+  ],
+
   "main": "app/index.js",
-  "repository": "someuser/generator-gulp-sass-typescript",
   "author": {
-    "name": "",
-    "email": "",
-    "url": "https://github.com/someuser"
+    "name": "Hajime Nagata",
+    "email": "hajime.nagata@ncreate.net",
+    "url": "https://github.com/hajimenagata"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.16.0",
+    "chalk": "~0.4.0",
+    "yosay": "^0.1.0"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -19,18 +39,12 @@
   "files": [
     "app"
   ],
-  "keywords": [
-    "yeoman-generator"
-  ],
-  "dependencies": {
-    "yeoman-generator": "~0.16.0",
-    "chalk": "~0.4.0",
-    "yosay": "^0.1.0"
-  },
   "devDependencies": {
     "mocha": "*"
   },
   "peerDependencies": {
     "yo": ">=1.0.0"
-  }
+  },
+
+  "license": "MIT"
 }
