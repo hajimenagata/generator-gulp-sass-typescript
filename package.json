@@ -1,6 +1,6 @@
 {
   "name": "generator-gulp-sass-typescript",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Yeoman generator | liveload, sass and TypeScript",
   "repository": {
     "type": "git",
