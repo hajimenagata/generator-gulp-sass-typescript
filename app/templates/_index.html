@@ -1,16 +1,61 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title><%= appname %></title>
-    <link rel="stylesheet" href="../styles/styles.css"/>
+<meta charset="UTF-8">
+<title><%= appname %></title>
+<% if (includeJQuery) { %><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><% } %>
+<% if (includeBootstrap) { %><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"><% } %>
+<% if (includeModernizr) { %><script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script><% } %>
+<link rel="stylesheet" href="../styles/styles.css"/>
 </head>
 <body>
 
-<h1>Hello!</h1>
-<p>generator-gulp-sass-typescript</p>
+<% if (includeBootstrap) { %>
+<div class="container">
+
+    <h3>'Allo, 'Allo!</h3>
+
+    <div class="jumbotron">
+        <p class="lead">Always a pleasure scaffolding your apps.</p>
+        <a class="btn btn-lg btn-success" href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+      <h3>You now have</h3>
+          <ul>
+              <li>HTML5</li>
+              <li>Sass</li>
+              <li>TypeScript</li>
+              <% if (includeJQuery) { %><li>jQuery</li><% } %>
+              <li>Bootstrap</li>
+              <% if (includeModernizr) { %><li>Modernizr</li><% } %>
+          </ul>
+        </div>
+    </div>
+
+</div>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<% } else { %>
+<div class="hero-unit">
+  <h1>'Allo, 'Allo!</h1>
+  <p>You now have</p>
+  <ul>
+    <li>HTML5</li>
+    <li>Sass</li>
+    <li>TypeScript</li>
+    <% if (includeJQuery) { %><li>jQuery</li><% } %>
+    <% if (includeModernizr) { %><li>Modernizr</li><% } %>
+  </ul>
+</div>
+<% } %>
 
 <script src="../scripts/main.js"></script>
 </body>
 </html>
+
+
+
 

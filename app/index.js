@@ -29,26 +29,34 @@ var GulpSassTypescriptGenerator = yeoman.generators.Base.extend({
     this.log(yosay('Welcome to the marvelous GulpSassTypescript generator!'));
     console.log(greeting);
 
-    var prompts = [
-/*
-      {
-        type: 'confirm',
-        name: 'someOption',
-        message: 'Would you like to enable this option?',
-        default: true
-      },
-      {
-        type: 'confirm',
-        name: 'someOption',
-        message: 'Would you like to enable this option2?',
-        default: true
-      },
-*/
-    ];
+    var prompts = [{
+      type: 'checkbox',
+      name: 'features',
+      message: 'What more would you like?',
+      choices: [{
+        name: 'Bootstrap',
+        value: 'includeBootstrap',
+        checked: true
+      },{
+        name: 'jQuery(v2.1.1)',
+        value: 'includeJQuery',
+        checked: false
+      },{
+        name: 'Modernizr(v2.8.2)',
+        value: 'includeModernizr',
+        checked: false
+      }]
+    }];
 
 
     this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
+      this.appname = props.appname;
+      var features = props.features;
+
+      function hasFeature(feat) { return features.indexOf(feat) !== -1; }
+      this.includeJQuery = hasFeature('includeJQuery');
+      this.includeBootstrap = hasFeature('includeBootstrap');
+      this.includeModernizr = hasFeature('includeModernizr');
 
       done();
     }.bind(this));
@@ -56,8 +64,6 @@ var GulpSassTypescriptGenerator = yeoman.generators.Base.extend({
 
   app: function () {
     this.mkdir('app');
-    this.mkdir('app/templates');
-
 
     this.mkdir('app/scripts');
     this.mkdir('app/styles');
